@@ -10,8 +10,11 @@ The environment uses **Proxmox VE** for virtualization, **OPNsense** for routing
 
 ## Lab Architecture
 
-The lab is divided into four security zones:
+### Network Architecture
 
+![Blue Team Detection Engineering Home Lab Network Architecture](network-diagram.png)
+
+The lab is divided into four security zones:
 | Network | Purpose |
 |---|---|
 | **Management** | Proxmox hosts, firewall administration, and infrastructure management |
