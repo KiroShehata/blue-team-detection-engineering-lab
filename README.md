@@ -144,16 +144,55 @@ All offensive activity was conducted exclusively against systems within the cont
 
 ## Project Screenshots
 
-Screenshots documenting the environment and detection results will include:
+The following screenshots document the lab environment, security telemetry, attack simulations, and custom detection engineering performed within the environment.
 
-- Wazuh SIEM dashboard
-- Network architecture
-- OPNsense firewall policies
-- File Integrity Monitoring alerts
-- SSH brute-force detections
-- Port-scan detections
-- Kerberoasting detections
-- Custom Wazuh detection rules
+### 1. Wazuh Agents Dashboard
+
+![Wazuh Agents Dashboard](screenshots/01_wazuh_agents_dashboard.png)
+
+Wazuh endpoint monitoring showing an active Windows victim endpoint connected to the SIEM/XDR infrastructure.
+
+### 2. File Integrity Monitoring Dashboard
+
+![File Integrity Monitoring Dashboard](screenshots/02_file_integrity_monitoring_dashboard.png)
+
+Wazuh File Integrity Monitoring (FIM) configured to monitor changes on the Ubuntu endpoint, including modifications to monitored system files.
+
+### 3. File Integrity Monitoring Event
+
+![File Integrity Monitoring Event](screenshots/03_file_integrity_monitoring_event.png)
+
+Detection of a monitored file modification, demonstrating Wazuh's ability to generate and correlate file-integrity telemetry.
+
+### 4. SSH Failed Authentication Alert
+
+![SSH Failed Authentication Alert](screenshots/04_ssh_failed_authentication_alert.png)
+
+Wazuh alert telemetry generated from failed SSH authentication activity against the Ubuntu victim endpoint.
+
+### 5. SSH Brute-Force Attack Detection
+
+![SSH Brute-Force Attack Detection](screenshots/05_ssh_brute_force_attack_detection.png)
+
+Controlled SSH authentication attempts from the Kali Linux Red Team system generated corresponding Wazuh brute-force alerts.
+
+### 6. Nmap Port-Scan Detection
+
+![Nmap Port Scan Detection](screenshots/06_nmap_port_scan_detection.png)
+
+Custom Wazuh detection logic identifying simulated Nmap reconnaissance against victim infrastructure.
+
+### 7. Custom Wazuh Detection Rules
+
+![Custom Wazuh Detection Rules](screenshots/07_custom_wazuh_rules.png)
+
+Custom Wazuh rules developed for SSH authentication failures, Nmap port-scanning activity, and potential Kerberoasting behavior.
+
+### 8. Kerberoasting Detection Alert
+
+![Kerberoasting Detection Alert](screenshots/08_kerberoasting_detection_alert.png)
+
+Custom Wazuh detection identifying suspicious Kerberos service-ticket activity associated with simulated Kerberoasting behavior in the Active Directory environment.
 
 ---
 
